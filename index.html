@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Stacking Window Manager</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<canvas id="canvas" width="800" height="600"></canvas>
+<br>
+<br>
+<br>
+<button onclick="WndMgr.addWindow(null, 0, 0, paintBouncingBalls)">Add Window</button>
+
+
+<main>
+
+<details>
+
+<summary>
+Click here to see the story...
+</summary>
+
+<h3>Stacking Window Manager</h3>
+<div class="credit">(Proposed by Marian Veteanu)</div>
+
+<p>
+This coding challenge will take you back to the early days of microcomputers and put you in the race to build the next user interface for a micro.
+In practical terms you’re asked to implement a <b>mini stacking window manager</b> using <b>JavaScript</b> and <b>HTML5 CANVAS</b>.
+</p>
+
+<p>
+The design is all yours! Please feel free to be original … or just leverage your knowledge from other operating systems GUI programming to implement this.
+</p>
+
+<p>
+<b><u>Important</u></b>: Try to time-box this project. Unless you plan to build the next Windows / Mac UI, try not to spend more than 1 – 2 evenings on this coding challenge.
+Focus only on the features that you believe are important to you… 
+</p>
+
+<p>
+When you send the solution, please describe:
+</p>
+
+<ul>
+<li>Features of your Window Manager</li>
+<li>The main idea behind your design</li>
+<li>What is the developer experience for the user of your GUI system / library</li>
+</ul>
+
+</details>
+
+<details>
+
+<summary>
+About my implementation...
+</summary>
+
+<p>
+My implementation is quite basic, a far cry from a real-life, Windows-like front-end.
+<br>
+But in any case, below I’ve enumerated the main features:
+</p>
+
+<h4>Stacking</h4>
+
+<ul>
+<li>Windows are stacked on top of each other</li>
+<li>You can make any window top-most, by clicking on it</li>
+<li>The active window stands out visually, by using a different color scheme</li>
+<li>You can close any window</li>
+</ul>
+
+<h4>Dragging</h4>
+
+<ul>
+<li>You can move any window by dragging its title bar</li>
+<li>Over the title bar, the mouse cursor becomes a "move" shape</li>
+</ul>
+
+<h4>Resizing</h4>
+
+<ul>
+<li>You can resize any window, by dragging borders and corners</li>
+<li>All four borders, and all four corners can be dragged</li>
+<li>Over borders and corners, the mouse cursor becomes a "resize" shape</li>
+</ul>
+
+<h4>Painting</h4>
+
+<ul>
+<li>Windows are responsible for painting their <b>frame</b> (title bar, close button, and borders)</li>
+<li>They receive a <b>translated</b> and <b>clipped</b> paint context:
+
+<ul>
+<li>Their upper-left corner is seen at coordinates <code>(0, 0)</code> -- no matter their actual position on the canvas</li>
+<li>They cannot paint outside their area, even if they try to</li>
+</ul>
+</li>
+<li>To paint the client area, they receive an optional, developer-provided paint function (see below)</li>
+</ul>
+
+<h4>Developer experience</h4>
+
+<ul>
+<li>Developer is responsible for painting the <b>client area</b> of the windows</li>
+<li>They can provide a callback function, which is called by the windows manager when painting is due</li>
+<li>The callback receives a paint context which is <b>translated</b> and <b>clipped</b>:
+
+<ul>
+<li>The client area’s upper-left corner is seen at coordinates <code>(0, 0)</code> -- no matter the window’s actual position on screen</li>
+<li>The callback cannot paint outside of the client area, even if it tried to</li>
+</ul>
+</li>
+
+</ul>
+
+<h4>Callback paint function</h4>
+
+<ul>
+<li>As an example, I’ve provided a paint function which does the following:
+
+<ul>
+<li>Creates a random number of balls</li>
+<li>Bounces the balls around, using random speeds for horizontal/vertical movement</li>
+<li>The balls have random radiuses, colors, and are created at random coordinates inside the client area</li>
+</ul>
+</li>
+
+</ul>
+
+</details>
+  
+</main>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

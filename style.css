@@ -1,0 +1,64 @@
+canvas {
+  border: 1px groove darkgrey;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+button {
+  margin-left: 100px;
+  width: 150px;
+  height: 50px;
+  font-weight: bold;
+  background: silver;
+  color: navy;
+}
+
+main {
+	max-width: 600px;
+	padding: 20px;
+  margin-left: 30px;
+  font-family: Verdana;
+	font-size: 11px;
+	color: #555555;
+	line-height: 150%;
+	letter-spacing: .25px;
+}
+
+details {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+details h3 {
+  color: midnightblue;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+details h4 {
+  color: midnightblue;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+summary {
+  font-style: italic;
+  color: navy;
+  font-size: 12px;
+  margin-top: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.credit {
+  font-size: smaller;
+  font-style: italic;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
